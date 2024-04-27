@@ -1,0 +1,32 @@
+div {
+    height: 800px;
+    border-radius: 20px;
+    border-style: solid;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+
+@media screen and (min-width: 1000px){
+    .right {
+        margin-left: 50%;
+        width: 45%;
+        margin-top: 0%;
+        height: 500px;
+    }
+
+    .left {
+        width: 45%; 
+        float: left; 
+        margin-left: 4%;
+        margin-top: 0%;
+        height: 500px;
+    
+    }
+}
