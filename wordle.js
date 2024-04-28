@@ -4,7 +4,7 @@ let wordChoice;
 let letterDict = {};
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("playagain").addEventListener("click", clearGame);
+    //document.getElementById("playagain").addEventListener("click", clearGame);
     startGame();
 });
 
@@ -44,11 +44,11 @@ function processGuess(){
         
         //grab the current row that we are on
         let containerDiv = document.getElementById(`row${currentGuess.toString()}`);
-        console.log(containerDiv);
+        console.log(currentGuess);
 
         //if a word is inputted and the player presses enter, validate the guess and move to the next row
         if (letter.key == "Enter" && currentLetter == 6){
-            checkGuess(containerDiv, guessedWord);
+            checkGuess(containerDiv, guessedWord, currentGuess);
             currentGuess++;
             currentLetter = 1;
             guessedWord = [];
@@ -80,7 +80,7 @@ function processGuess(){
 }
 
 
-function checkGuess(containerDiv, guessedWord){
+function checkGuess(containerDiv, guessedWord, currentGuess){
     let checkDict = {}
 
     console.log("entered checkguess");
@@ -99,8 +99,10 @@ function checkGuess(containerDiv, guessedWord){
         else if(!(guessedWord[i] in letterDict)){
             containerDiv.children[i].style.setProperty("background-color", "grey");
         }
+    }
 
-        else{
+    for (let i = 0; i < 5; i++){
+        if (guessedWord[i] != wordChoice[i] && guessedWord[i] in letterDict){
             if (guessedWord[i] in checkDict){
                 checkDict[guessedWord[i]] += 1;
             }
@@ -115,17 +117,24 @@ function checkGuess(containerDiv, guessedWord){
                 containerDiv.children[i].style.setProperty("background-color", "grey");
             }
         }
-        //containerDiv.children[i].style.setProperty("background-color", "green");
     }
 
     if (guessedWord.join("") == wordChoice){
-        console.log("Winner");
-        document.innerHTML = `You won! The word was ${wordChoice}`;
+        setTimeout(wonGame, 1000);
+    }
+
+    if (guessedWord.join("") != wordChoice && currentGuess >= 6){
+        setTimeout(lostGame, 1000);
     }
     return;
 
 }
 
-function clearGame(){
+function wonGame(){
+    location.reload();
+    
+}
 
+function lostGame(){
+    location.reload();
 }

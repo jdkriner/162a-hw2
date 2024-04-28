@@ -8,11 +8,13 @@ div {
     margin-top: 50px;
     text-align: center;
     align-items: center;
+    
 }
 
 h1{
     text-align: center;
 }
+
 
 
 
@@ -37,6 +39,8 @@ h1{
         margin-bottom: -40px;
         font-size: 70px;
     }
+
+    
 
 
 }
