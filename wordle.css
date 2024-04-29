@@ -1,21 +1,55 @@
-div {
-    height: 800px;
-    border-radius: 20px;
-    border-style: solid;
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 50px;
-    margin-top: 50px;
+body{
+    background-color: #272727;
+}
+
+div{
     text-align: center;
     align-items: center;
-    
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.outer{
+    background-color: #14A76C;
+    height: 950px;
+    width: 50%;
+    margin-left: 25%;
+    border-color:lightgrey;
 }
 
 h1{
+    background-color: #14A76C;
+    width: 30%;
+    margin-left: 35%;
+    border-color: lightgrey;
+    border-radius: 20px;
+    border-style: solid;
     text-align: center;
 }
 
+.container{
+    text-align: center;
+    height: 110px;
+    border: none;
+    margin-left: 5%;
+    margin-top: 10%;
+    width: auto;
 
+}
+
+.letterbox{
+    background-color: white;
+    width: 17%;
+    height: 90px;
+    float: left;
+    font-size: 50px;
+}
+
+.rules{
+    margin-top: 15%;
+    background-color: lightgrey;
+    font-size: 20px;
+}
 
 
 
@@ -23,24 +57,28 @@ h1{
 @media screen and (min-width: 1000px){
 
     .container{
-        text-align: center;
-        height: 110px;
-        border: none;
+        width: auto;
+        margin-bottom: -40px;
 
     }
 
     .letterbox{
-        border: solid;
-        height: 100px;
-        width: 7%;
-        margin-left: 10px;
-        margin-right: 10px;
-        display: inline-block;
-        margin-bottom: -40px;
-        font-size: 70px;
+        width: 14%;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 110px;
+        font-size: 80px;
     }
-
     
-
+    .outer{
+        height: 1100px;
+        width: 50%;
+        margin-left: 25%;
+        float: left;
+    }
+    
+    body{
+        background-color: #272727;
+    }
 
 }

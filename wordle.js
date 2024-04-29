@@ -12,8 +12,7 @@ function startGame(){
     console.log("entererd startgame");
 
     //choose a random word from list and populate char vars and dict that will be used for validation
-    //wordChoice = wordBank[Math.floor(Math.random() * 100)];
-    wordChoice = "bloom";
+    wordChoice = wordBank[Math.floor(Math.random() * 100)];
     
 
     for (let i = 0; i < 5; i++){
@@ -87,7 +86,7 @@ function checkGuess(containerDiv, guessedWord, currentGuess){
     
     for (let i = 0; i < 5; i++){
         if (guessedWord[i] == wordChoice[i]){
-            containerDiv.children[i].style.setProperty("background-color", "green");
+            containerDiv.children[i].style.setProperty("background-color", "darkgreen");
             if (guessedWord[i] in checkDict){
                 checkDict[guessedWord[i]] += 1;
             }

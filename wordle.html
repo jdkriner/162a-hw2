@@ -12,53 +12,65 @@
   <body>
 
     <h1>Wordle</h1>
-    
-    <div class="container" id="row1">
+    <!--Image from https://siivagunner.fandom.com/wiki/Main_Theme_-_Wordle       <img src="images/wordletitle.png">-->
+    <div class="outer">
+      <div class="container" id="row1">
+          <div class="letterbox" id="1"></div>
+          <div class="letterbox" id="2"></div>
+          <div class="letterbox" id="3"></div>
+          <div class="letterbox" id="4"></div>
+          <div class="letterbox" id="5"></div>
+      </div>
+
+      <div class="container" id="row2">
+          <div class="letterbox" id="1"></div>
+          <div class="letterbox" id="2"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+      </div>
+
+      <div class="container" id="row3">
+          <div class="letterbox" id="1"></div>
+          <div class="letterbox" id="2"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+      </div>
+
+      <div class="container" id="row4">
+          <div class="letterbox" id="1"></div>
+          <div class="letterbox" id="2"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+      </div>
+
+      <div class="container" id="row5">
+          <div class="letterbox" id="1"></div>
+          <div class="letterbox" id="2"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+          <div class="letterbox"></div>
+      </div>
+
+      <div class="container" id="row6">
         <div class="letterbox" id="1"></div>
         <div class="letterbox" id="2"></div>
-        <div class="letterbox" id="3"></div>
-        <div class="letterbox" id="4"></div>
-        <div class="letterbox" id="5"></div>
-    </div>
-
-    <div class="container" id="row2">
-        <div class="letterbox" id="1"></div>
-        <div class="letterbox" id="2"></div>
         <div class="letterbox"></div>
         <div class="letterbox"></div>
         <div class="letterbox"></div>
     </div>
 
-    <div class="container" id="row3">
-        <div class="letterbox" id="1"></div>
-        <div class="letterbox" id="2"></div>
-        <div class="letterbox"></div>
-        <div class="letterbox"></div>
-        <div class="letterbox"></div>
+    <div class="rules">
+      <h3>How To Play</h3>
+      <p>Green means the letter is in the right spot</p>
+      <p>Yellow means the letter is in the word, but not in the right spot</p>
+      <p>Grey means that the letter is not in the word</p>
     </div>
 
-    <div class="container" id="row4">
-        <div class="letterbox" id="1"></div>
-        <div class="letterbox" id="2"></div>
-        <div class="letterbox"></div>
-        <div class="letterbox"></div>
-        <div class="letterbox"></div>
-    </div>
 
-    <div class="container" id="row5">
-        <div class="letterbox" id="1"></div>
-        <div class="letterbox" id="2"></div>
-        <div class="letterbox"></div>
-        <div class="letterbox"></div>
-        <div class="letterbox"></div>
-    </div>
 
-    <div class="container" id="row6">
-      <div class="letterbox" id="1"></div>
-      <div class="letterbox" id="2"></div>
-      <div class="letterbox"></div>
-      <div class="letterbox"></div>
-      <div class="letterbox"></div>
   </div>
   
   <script src="wordle.js"></script>

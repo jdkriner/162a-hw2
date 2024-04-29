@@ -1,6 +1,10 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+
 div {
     height: 800px;
-    border-radius: 20px;
     border-style: solid;
     width: 80%;
     margin-left: 10%;
@@ -8,10 +12,60 @@ div {
     margin-top: 50px;
     text-align: center;
     align-items: center;
+    border-color: yellow;
+    background-color: #474747;
+
 }
 
+#wordle{
+    background-image: url("images/wordle-icon-nl-popup.png");
+    background-color: #14A76C;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: 40%;
+    border-color: #474747;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+}
 
+#game1{
+    background-color: #FF652F;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: 40%;
+    border-color: #474747;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+}
 
+#game3{
+    background-color: #FFE400;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: 40%;
+    border-color: #474747;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+}
+
+img{
+    width: 80%;
+}
+
+h1{
+    background-color: black;
+}
+
+h2{
+    font-size: 40px;
+}
+
+.bottom{
+    margin-top: 45%;
+}
 
 @media screen and (min-width: 1000px){
     .right {
