@@ -133,13 +133,21 @@ function checkGuess(containerDiv, guessedWord, currentGuess){
 
 //quick func for wins
 function wonGame(){
-    alert("You won!");
-    location.reload();
-    
+    resText = document.querySelector(".result");
+    resText.innerHTML = "<h2>You Won!</h2>";
+    resText.style.display = "block";
+    setTimeout(restartGame, 2000);
 }
 
 //quick func for losses
-function lostGame(){
-    alert(`The word was ${wordChoice}. Better luck next time!`);
+function lostGame(){ 
+    resText = document.querySelector(".result");
+    resText.innerHTML = `<h2>Better Luck Next Time!</h2>
+                         <h3>The Word Was ${wordChoice}</h3>`;
+    resText.style.display = "block";
+    setTimeout(restartGame, 2000);
+}
+
+function restartGame(){
     location.reload();
 }

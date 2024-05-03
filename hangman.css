@@ -1,12 +1,43 @@
-.container {
+body{
+    background-color: #272727;
+}
+
+div{
     background-color: #FF652F;
     border-radius: 10px;
     padding-bottom: 20px;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: lightgrey;
+}
+
+.float-right{
+    border: none;
+}
+
+.text-center{
+    border: none;
+}
+
+#keyboard{
+    border: none;
+    width: auto;
+    margin-left: -50%;
+    margin-right: -50%;
+
 }
 
 .btn-color {
     color: black;
     font-weight: 700;
+}
+
+.title{
+    margin-top: 30px;
+    width: 30%;
+    margin-left: 35%;
 }
 
 h3 {

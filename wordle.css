@@ -52,6 +52,17 @@ h1{
     text-align: center;
 }
 
+.result{
+    width: 15%;
+    margin-right: 5%;
+    float: right;
+    border: solid;
+    height: 200px;
+    background-color:#14A76C;
+    border-color: lightgrey;
+    display: none;
+}
+
 
 
 

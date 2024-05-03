@@ -29,14 +29,15 @@ div {
 }
 
 #game1{
+    background-image: url("images/hangman-removebg-preview.png"); /* source: https://www.flaticon.com/free-icon/hangman-game_3274156 */
     background-color: #FF652F;
-    background-size: 40%;
+    background-size: 30%;
 }
 
 #game3{
     background-image: url("images/coinflipreal.png");   /*source: https://www.pngegg.com/en/search?q=coin+flip */
     background-color: #FFE400;
-    background-size: 40%;
+    background-size: 30%;
 }
 
 img{
@@ -55,6 +56,7 @@ h2{
     position: relative;
     bottom: -375px;
 }
+
 
 @media screen and (min-width: 1000px){
     .right {
@@ -76,5 +78,10 @@ h2{
     .bottom{
         position: relative;
         bottom: -275px;
+    }
+
+    .middle{
+        width: 45%;
+        margin-left: 27.5%;
     }
 }
