@@ -74,7 +74,7 @@ h2{
     }
 
     .bottom{
-    position: relative;
-    bottom: -275px;
-}
+        position: relative;
+        bottom: -275px;
+    }
 }

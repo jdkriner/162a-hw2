@@ -15,11 +15,6 @@ div{
   border-color: lightgrey;
 }
 
-
-.slider{
-  height: 400px;
-}
-
 .coinpic{
   height: 500px;
   margin-top: 50px;
@@ -38,12 +33,6 @@ div{
 .slider{
   height: 300px;
 }
-
-
-
-
-
-
 
 #probabilityInput {
   width: 200px;

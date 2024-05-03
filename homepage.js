@@ -1,3 +1,4 @@
+//keyboard accessibility listeners
 document.addEventListener("keydown", (letter) => {
   if (letter.key == "1") {
     window.location.assign("coin.html");

@@ -3,18 +3,16 @@ const wordBank = ["fully", "chief", "voice", "empty","shape","suite", "space","u
 let wordChoice;
 let letterDict = {};
 
+//initiate the game loop on page load
 document.addEventListener("DOMContentLoaded", () => {
-    //document.getElementById("playagain").addEventListener("click", clearGame);
     startGame();
 });
 
+
+//this function chooses a random word from tbe word list and populates the wordChoice and letterDict globals 
+//for verifciation later
 function startGame(){
-    console.log("entererd startgame");
-
-    //choose a random word from list and populate char vars and dict that will be used for validation
     wordChoice = wordBank[Math.floor(Math.random() * 100)];
-    
-
     for (let i = 0; i < 5; i++){
         if (wordChoice[i] in letterDict){
             letterDict[wordChoice[i]] += 1;
@@ -23,17 +21,12 @@ function startGame(){
             letterDict[wordChoice[i]] = 1;
         }
     }
-
-    console.log(letterDict);
-
     //start the game loop
     processGuess();
-    console.log("after process guess");
 
 }
 
 function processGuess(){
-    console.log("Entered processGuess");
     let currentLetter = 1;
     let guessedWord = [];
 
@@ -64,19 +57,16 @@ function processGuess(){
 
         //when a valid letter is entered place it in the box
         else if (letter.key >= "a" && letter.key <= "z" && currentLetter < 6){
-            console.log(`key pressed ${letter.key}`);
             let cell = containerDiv.children[(currentLetter-1).toString()];
-            //let cell = containerDiv.getElementById(currentLetter.toString());
-            console.log(`cell: ${cell}`);
             cell.innerHTML = `${letter.key}`;
             guessedWord.push(letter.key);
             currentLetter++;
         }
 
+        //return the user to the homepage if they press 0
         else if (letter.key == "0"){
             window.location.assign("homepage.html");
         }
-        console.log(currentLetter);
     });
 
     return;
@@ -86,8 +76,8 @@ function processGuess(){
 function checkGuess(containerDiv, guessedWord, currentGuess){
     let checkDict = {}
 
-    console.log("entered checkguess");
-    
+    //if the letter is in the right spot, make the cell background green, and index it in checkDict, 
+    //which will be used for verification    
     for (let i = 0; i < 5; i++){
         if (guessedWord[i] == wordChoice[i]){
             containerDiv.children[i].style.setProperty("background-color", "darkgreen");
@@ -99,12 +89,17 @@ function checkGuess(containerDiv, guessedWord, currentGuess){
             }
         }
         
+        //if the letter is not in the word, make the background grey
         else if(!(guessedWord[i] in letterDict)){
             containerDiv.children[i].style.setProperty("background-color", "grey");
         }
     }
 
+    //if the letter is in the word and already in the current guess, color appropriately
+    //this is done in a separate loop because the logic with multiple of the same character gets messy
     for (let i = 0; i < 5; i++){
+
+        //if the letter is in the word, but not in the right spot, figure out the yellow/grey lofgic
         if (guessedWord[i] != wordChoice[i] && guessedWord[i] in letterDict){
             if (guessedWord[i] in checkDict){
                 checkDict[guessedWord[i]] += 1;
@@ -113,6 +108,7 @@ function checkGuess(containerDiv, guessedWord, currentGuess){
                 checkDict[guessedWord[i]] = 1;
             }
 
+            //color the letter appropriately depending on the number of that letter already inputted
             if (checkDict[guessedWord[i]] <= letterDict[guessedWord[i]]){
                 containerDiv.children[i].style.setProperty("background-color", "yellow");
             }
@@ -122,10 +118,12 @@ function checkGuess(containerDiv, guessedWord, currentGuess){
         }
     }
 
+    //check for win
     if (guessedWord.join("") == wordChoice){
         setTimeout(wonGame, 1000);
     }
 
+    //check for loss
     if (guessedWord.join("") != wordChoice && currentGuess >= 6){
         setTimeout(lostGame, 1000);
     }
@@ -133,12 +131,14 @@ function checkGuess(containerDiv, guessedWord, currentGuess){
 
 }
 
+//quick func for wins
 function wonGame(){
     alert("You won!");
     location.reload();
     
 }
 
+//quick func for losses
 function lostGame(){
     alert(`The word was ${wordChoice}. Better luck next time!`);
     location.reload();
