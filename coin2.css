@@ -1,3 +1,50 @@
+body{
+  align-items: center;
+  text-align: center;
+  background-color: #272727;
+}
+
+div{
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 5px;
+  width: 60%;
+  margin-left: 20%;
+  background-color: #FFE400;
+  height: 800px;
+  margin-bottom: 30px;
+}
+
+
+.slider{
+  height: 400px;
+}
+
+.coinpic{
+  height: 500px;
+  margin-top: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-style: none;
+}
+
+.resulttext{
+  height: 50px;
+  border-style: none;
+  
+}
+
+.slider{
+  height: 300px;
+}
+
+
+
+
+
+
+
 #probabilityInput {
   width: 200px;
 }
