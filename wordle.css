@@ -46,9 +46,11 @@ h1{
 }
 
 .rules{
-    margin-top: 15%;
     background-color: lightgrey;
     font-size: 20px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 25px;
 }
 
 
@@ -76,9 +78,9 @@ h1{
         margin-left: 25%;
         float: left;
     }
-    
-    body{
-        background-color: #272727;
+
+    .rules{
+        margin-top: 1150px;
     }
 
 }

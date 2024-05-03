@@ -28,13 +28,13 @@ function flipCoin() {
     text = document.querySelector(".resulttext")
     text.innerHTML = "<h1>Heads!</h1>";
     image = document.querySelector(".coinpic");
-    image.style.backgroundImage = "url('images/heads.png')";
+    image.style.backgroundImage = "url('images/heads.png')"; //source:  http://www.clker.com/clipart-361418.html
+    
 
   } else {
     text = document.querySelector(".resulttext")
     text.innerHTML = "<h1>Tails!</h1>";
     image = document.querySelector(".coinpic");
-    image.style.backgroundImage = "url('images/tails.png')";
-    
+    image.style.backgroundImage = "url('images/tails.png')";  //source: https://www.littletoncoin.com/shop/1998-s-silver-washington-quarter-pr63-438571
   }
 }

@@ -4,7 +4,7 @@ body{
 }
 
 div {
-    height: 800px;
+    height: 600px;
     border-style: solid;
     width: 80%;
     margin-left: 10%;
@@ -24,7 +24,7 @@ div {
 }
 
 #wordle{
-    background-image: url("images/wordle-icon-nl-popup.png");
+    background-image: url("images/wordle-icon-nl-popup.png"); /*source: https://www.nytimes.com/newsletters/signup/NTWO*/
     background-color: #14A76C;
 }
 
@@ -34,6 +34,7 @@ div {
 }
 
 #game3{
+    background-image: url("images/coinflipreal.png");   /*source: https://www.pngegg.com/en/search?q=coin+flip */
     background-color: #FFE400;
     background-size: 40%;
 }
@@ -51,7 +52,8 @@ h2{
 }
 
 .bottom{
-    margin-top: 45%;
+    position: relative;
+    bottom: -375px;
 }
 
 @media screen and (min-width: 1000px){
@@ -70,4 +72,9 @@ h2{
         height: 500px;
     
     }
+
+    .bottom{
+    position: relative;
+    bottom: -275px;
+}
 }

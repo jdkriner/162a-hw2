@@ -72,6 +72,10 @@ function processGuess(){
             guessedWord.push(letter.key);
             currentLetter++;
         }
+
+        else if (letter.key == "0"){
+            window.location.assign("homepage.html");
+        }
         console.log(currentLetter);
     });
 
@@ -130,10 +134,12 @@ function checkGuess(containerDiv, guessedWord, currentGuess){
 }
 
 function wonGame(){
+    alert("You won!");
     location.reload();
     
 }
 
 function lostGame(){
+    alert(`The word was ${wordChoice}. Better luck next time!`);
     location.reload();
 }
